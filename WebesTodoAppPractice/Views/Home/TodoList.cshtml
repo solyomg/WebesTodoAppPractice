@@ -1,0 +1,22 @@
+﻿@model List<WebesTodoAppPractice.Models.TodoItem>
+@{
+    ViewBag.Title = "TodoList";
+}
+
+<h2>Bevásárló lista</h2>
+
+@foreach (var element in Model)
+{
+<ul>
+    @if (element.Done)
+    {
+        <li><strike>@element.Name</strike></li>
+    }
+    else
+    {
+        <li>@element.Name</li>
+    }
+
+
+</ul>
+}
